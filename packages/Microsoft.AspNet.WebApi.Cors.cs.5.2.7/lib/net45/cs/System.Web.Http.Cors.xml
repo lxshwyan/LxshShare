@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Http.Cors</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.Http.CorsHttpConfigurationExtensions">
+      <summary>Metody rozšíření související se sdílením CORS pro <see cref="T:System.Web.Http.HttpConfiguration" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.EnableCors(System.Web.Http.HttpConfiguration)">
+      <summary>Povolí podporu pro sdílení CORS.</summary>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.EnableCors(System.Web.Http.HttpConfiguration,System.Web.Http.Cors.ICorsPolicyProvider)">
+      <summary>Povolí podporu pro sdílení CORS.</summary>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+      <param name="defaultPolicyProvider">Výchozí objekt <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.GetCorsEngine(System.Web.Http.HttpConfiguration)">
+      <summary>Získá položku <see cref="T:System.Web.Cors.ICorsEngine" /> z objektu <see cref="T:System.Web.Http.HttpConfiguration" />.</summary>
+      <returns>Objekt <see cref="T:System.Web.Cors.ICorsEngine" /></returns>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.GetCorsPolicyProviderFactory(System.Web.Http.HttpConfiguration)">
+      <summary>Získá položku <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /> z objektu <see cref="T:System.Web.Http.HttpConfiguration" />.</summary>
+      <returns>Objekt <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /></returns>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.SetCorsEngine(System.Web.Http.HttpConfiguration,System.Web.Cors.ICorsEngine)">
+      <summary>Nastaví <see cref="T:System.Web.Cors.ICorsEngine" /> pro objekt <see cref="T:System.Web.Http.HttpConfiguration" />.</summary>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+      <param name="corsEngine">Objekt <see cref="T:System.Web.Cors.ICorsEngine" /></param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration nebo corsEngine</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.SetCorsPolicyProviderFactory(System.Web.Http.HttpConfiguration,System.Web.Http.Cors.ICorsPolicyProviderFactory)">
+      <summary>Nastaví <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /> pro objekt <see cref="T:System.Web.Http.HttpConfiguration" />.</summary>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+      <param name="corsPolicyProviderFactory">Objekt <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /></param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration nebo corsPolicyProviderFactory</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory">
+      <summary>Implementace objektu <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" />, která vrací <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> z atributu akce nebo kontroleru.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory.#ctor">
+      <summary>Inicializuje novou instanci třídy <see cref="T:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory" />.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory.DefaultPolicyProvider">
+      <summary>Získá nebo nastaví výchozí překladač <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</summary>
+      <returns>Výchozí objekt <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory.GetCorsPolicyProvider(System.Net.Http.HttpRequestMessage)">
+      <summary>Získá položku <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> pro daný požadavek.</summary>
+      <returns>Objekt <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /></returns>
+      <param name="request">Žádost</param>
+      <exception cref="T:System.ArgumentNullException">požadavek</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.CorsHttpRequestMessageExtensions">
+      <summary>Metody rozšíření související se sdílením CORS pro <see cref="T:System.Net.Http.HttpRequestMessage" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsHttpRequestMessageExtensions.GetCorsRequestContext(System.Net.Http.HttpRequestMessage)">
+      <summary>Získá položku <see cref="T:System.Web.Cors.CorsRequestContext" /> pro daný požadavek.</summary>
+      <returns>Objekt <see cref="T:System.Web.Cors.CorsRequestContext" /></returns>
+      <param name="request">Objekt <see cref="T:System.Net.Http.HttpRequestMessage" /></param>
+      <exception cref="T:System.ArgumentNullException">požadavek</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.CorsHttpResponseMessageExtensions">
+      <summary>Metody rozšíření související se sdílením CORS pro <see cref="T:System.Net.Http.HttpResponseMessage" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsHttpResponseMessageExtensions.WriteCorsHeaders(System.Net.Http.HttpResponseMessage,System.Web.Cors.CorsResult)">
+      <summary>Zapíše hlavičky CORS do odpovědi.</summary>
+      <param name="response">Objekt <see cref="T:System.Net.Http.HttpResponseMessage" /></param>
+      <param name="corsResult">Objekt <see cref="T:System.Web.Cors.CorsResult" /></param>
+      <exception cref="T:System.ArgumentNullException">response nebo corsResult</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.CorsMessageHandler">
+      <summary>Vlastní rutina <see cref="T:System.Net.Http.DelegatingHandler" /> pro zpracování požadavků CORS.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.#ctor(System.Web.Http.HttpConfiguration)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:System.Web.Http.Cors.CorsMessageHandler" />.</summary>
+      <param name="httpConfiguration">Objekt <see cref="T:System.Web.Http.HttpConfiguration" /></param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.HandleCorsPreflightRequestAsync(System.Net.Http.HttpRequestMessage,System.Web.Cors.CorsRequestContext,System.Threading.CancellationToken)">
+      <summary>Zpracuje předběžný požadavek určený sdílením CORS.</summary>
+      <returns>Objekt <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <param name="request">Žádost</param>
+      <param name="corsRequestContext">Kontext požadavku sdílení CORS.</param>
+      <param name="cancellationToken">Token zrušení</param>
+      <exception cref="T:System.ArgumentNullException">request nebo corsRequestContext</exception>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.HandleCorsRequestAsync(System.Net.Http.HttpRequestMessage,System.Web.Cors.CorsRequestContext,System.Threading.CancellationToken)">
+      <summary>Zpracuje aktuální požadavek CORS.</summary>
+      <returns>Objekt <see cref="T:System.Threading.Tasks.Task`1" /></returns>
+      <param name="request">Objekt <see cref="T:System.Net.Http.HttpRequestMessage" /></param>
+      <param name="corsRequestContext">Objekt <see cref="T:System.Web.Cors.CorsRequestContext" /></param>
+      <param name="cancellationToken">Objekt <see cref="T:System.Threading.CancellationToken" /></param>
+      <exception cref="T:System.ArgumentNullException">request nebo corsRequestContext</exception>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+      <summary>Odešle vnitřní obslužné rutině požadavek HTTP, který má být odeslán server jako asynchronní operace.</summary>
+      <returns>Vrací objekt <see cref="T:System.Threading.Tasks.Task`1" />.Objekt úlohy představující asynchronní operaci.</returns>
+      <param name="request">Zpráva požadavku HTTP k odeslání serveru.</param>
+      <param name="cancellationToken">Token zrušení pro zrušení operace.</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.DisableCorsAttribute">
+      <summary>Tato třída definuje atribut, který lze použít u akce nebo kontroleru k zákazu sdílení CORS.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.DisableCorsAttribute.#ctor">
+      <summary>Inicializuje novou instanci třídy <see cref="T:System.Web.Http.Cors.DisableCorsAttribute" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.DisableCorsAttribute.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+      <summary>Získá zásady sdílení CORS asynchronně.</summary>
+      <returns>Nově vytvořená úloha pro tuto operaci</returns>
+      <param name="request">Žádost</param>
+      <param name="cancellationToken">Token zrušení přidružený k této úloze</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.EnableCorsAttribute">
+      <summary>Tato třída definuje atribut, který lze použít u akce nebo kontroleru k povolení sdílení CORS. Ve výchozím nastavení povoluje libovolný původ a všechny metody a hlavičky.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.EnableCorsAttribute.#ctor(System.String,System.String,System.String)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:System.Web.Http.Cors.EnableCorsAttribute" />.</summary>
+      <param name="origins">Seznam původů oddělených čárkami, pro které je povolen přístup k prostředku. Chcete-li povolit vše, použijte nastavení "*".</param>
+      <param name="headers">Seznam hlaviček oddělených čárkami, které jsou prostředkem podporovány. Chcete-li povolit vše, použijte nastavení "*". Nechcete-li povolit žádné, použijte hodnotu null nebo prázdný řetězec.</param>
+      <param name="methods">Seznam metod oddělených čárkami, které jsou prostředkem podporovány. Chcete-li povolit vše, použijte nastavení "*". Nechcete-li povolit žádné, použijte hodnotu null nebo prázdný řetězec.   Poznámka:   V příkazech HTTP se rozlišují malá a velká písmena. Pokud nepoužijete nastavení "*", měli byste příkazy GET, PUT, POST, DELETE apod. zadat velkými písmeny. Příklad:   var cors = new EnableCorsAttribute("http://localhost:1234", "*", "GET,PUT,POST,DELETE");  </param>
+    </member>
+    <member name="M:System.Web.Http.Cors.EnableCorsAttribute.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:System.Web.Http.Cors.EnableCorsAttribute" />.</summary>
+      <param name="origins">Seznam původů oddělených čárkami, pro které je povolen přístup k prostředku. Chcete-li povolit vše, použijte nastavení "*".</param>
+      <param name="headers">Seznam hlaviček oddělených čárkami, které jsou prostředkem podporovány. Chcete-li povolit vše, použijte nastavení "*". Nechcete-li povolit žádné, použijte hodnotu null nebo prázdný řetězec.</param>
+      <param name="methods">Seznam metod oddělených čárkami, které jsou prostředkem podporovány. Chcete-li povolit vše, použijte nastavení "*". Nechcete-li povolit žádné, použijte hodnotu null nebo prázdný řetězec.</param>
+      <param name="exposedHeaders">Seznam hlaviček oddělených čárkami, které prostředek může použít a které mohou být zveřejněny. Nechcete-li zveřejnit žádné, použijte hodnotu null nebo prázdný řetězec.</param>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.ExposedHeaders">
+      <summary>Získá seznam hlaviček, které prostředek může použít a které mohou být zveřejněny.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.EnableCorsAttribute.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"></member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.Headers">
+      <summary>Získá seznam hlaviček, které jsou prostředkem podporovány.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.Methods">
+      <summary>Získá seznam metod, které jsou prostředkem podporovány.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.Origins">
+      <summary>Získá seznam původů, pro které je povolen přístup k prostředku.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.PreflightMaxAge">
+      <summary>Získá nebo nastaví počet sekund, po něž mohou být výsledky předběžného požadavku uloženy v mezipaměti.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.SupportsCredentials">
+      <summary>Získá nebo nastaví hodnotu, která určuje, zda prostředek podporuje pověření uživatele v požadavku.</summary>
+    </member>
+    <member name="T:System.Web.Http.Cors.ICorsPolicyProvider">
+      <summary>Poskytuje abstrakci pro získání položky <see cref="T:System.Web.Cors.CorsPolicy" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.ICorsPolicyProvider.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+      <summary>Získá konfiguraci <see cref="T:System.Web.Cors.CorsPolicy" />.</summary>
+      <returns>Objekt <see cref="T:System.Web.Cors.CorsPolicy" /></returns>
+      <param name="request">Žádost</param>
+      <param name="cancellationToken">Token zrušení</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.ICorsPolicyProviderFactory">
+      <summary>Poskytuje abstrakci pro získání položky <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.ICorsPolicyProviderFactory.GetCorsPolicyProvider(System.Net.Http.HttpRequestMessage)">
+      <summary>Získá položku <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> pro daný požadavek.</summary>
+      <returns>Objekt <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /></returns>
+      <param name="request">Žádost</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.Tracing.TraceCategories">
+      <summary>Názvy kategorií trasované pomocí výchozí implementace trasování CORS.</summary>
+    </member>
+    <member name="F:System.Web.Http.Cors.Tracing.TraceCategories.CorsCategory">
+      <summary>Kategorie trasování pro události související se sdílením CORS.</summary>
+    </member>
+  </members>
+</doc>

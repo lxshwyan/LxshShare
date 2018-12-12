@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lxsh.Project.CountingAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Lxsh.Project.CountingAPI.SwaggerConfig.CachingSwaggerProvider.GetControllerDesc">
+            <summary>
+            从API文档中读取控制器描述
+            </summary>
+            <returns>所有控制器描述</returns>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.SwaggerConfig.UploadFilter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+                文件上传
+            </summary>
+            <param name="operation"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiDescription"></param>
+        </member>
+        <!-- 对于成员“T:Lxsh.Project.CountingAPI.Controllers.CountingController”忽略有格式错误的 XML 注释 -->
+        <member name="M:Lxsh.Project.CountingAPI.Controllers.CountingController.GetTime(System.DateTime)">
+            <summary>
+            根据时间获取批次时间
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.Controllers.CountingController.get">
+            <summary>
+            测试
+            </summary>
+            <returns></returns>    
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.Controllers.CountingController.OffenderCounted(System.String)">
+            <summary>
+            设置罪犯清点完成,生成新批次
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.Controllers.CountingController.SystemTime">
+            <summary>
+            返回服务器时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.Controllers.CountingController.UDPSendMsg(System.String,System.Int32,System.String)">
+            <summary>
+            发送消息到指定的IP端口
+            </summary>
+            <param name="strIP"></param>
+            <param name="nPort"></param>
+            <param name="strMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.Controllers.CountingController.XmlSave(System.String,System.String,System.String,System.String)">
+            <summary>
+            保存xml文件
+            </summary>
+            <param name="strXmlPath">文件路径，例：20180507\08-00</param>
+            <param name="strXmlName">文件名称，例：测试</param>
+            <param name="strXmlInfo">文件内容，xml格式</param>
+             <param name="isSendMsg">是否发生UDP消息1-发送 0-不发送</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.TrimToDBCModelBinder.ToDBC(System.String)">
+             <summary> 全角转半角的函数(DBC case) </summary>
+             <param name="input">任意字符串</param>
+             <returns>半角字符串</returns>
+            <remarks>
+            全角空格为12288，半角空格为32
+            其他字符半角(33-126)与全角(65281-65374)的对应关系是：均相差65248
+            </remarks>
+        </member>
+        <member name="T:Lxsh.Project.CountingAPI.GlobalData">
+            <summary>
+            全局数据
+            </summary>
+        </member>
+        <member name="F:Lxsh.Project.CountingAPI.GlobalData.m_XmlPath">
+            <summary>
+            XML文件存储路径
+            </summary>
+        </member>
+        <member name="F:Lxsh.Project.CountingAPI.GlobalData.CriminalPhotoUrl">
+            <summary>
+            罪犯照片地址
+            </summary>
+        </member>
+        <member name="F:Lxsh.Project.CountingAPI.GlobalData.otherTime">
+            <summary>
+            当前互监清点的时间
+            </summary>
+        </member>
+        <member name="F:Lxsh.Project.CountingAPI.GlobalData.otherCount">
+            <summary>
+            当前需要互监清点
+            </summary>
+        </member>
+        <member name="F:Lxsh.Project.CountingAPI.GlobalData.CountList">
+            <summary>
+            清点名单
+            </summary>
+        </member>
+        <member name="P:Lxsh.Project.CountingAPI.LoginResult.IsSucceed">
+            <summary>
+            登录是否成功
+            </summary>
+        </member>
+        <member name="P:Lxsh.Project.CountingAPI.LoginResult.UserInfo">
+            <summary>
+            登录用户信息
+            </summary>
+        </member>
+        <member name="P:Lxsh.Project.CountingAPI.LoginResult.Ticket">
+            <summary>
+            登录的票据
+            </summary>
+        </member>
+        <member name="P:Lxsh.Project.CountingAPI.LoginResult.ReturnUrl">
+            <summary>
+            需要跳转的Url
+            </summary>
+        </member>
+        <member name="P:Lxsh.Project.CountingAPI.LoginResult.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:Lxsh.Project.CountingAPI.MessageComm">
+            <summary>
+            清点消息控制类
+            </summary>
+        </member>
+        <member name="M:Lxsh.Project.CountingAPI.MessageComm._init">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

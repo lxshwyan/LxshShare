@@ -1,0 +1,8 @@
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\bin\Debug\Lxsh.Project.CountingInterface.dll
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\bin\Debug\Lxsh.Project.CountingInterface.pdb
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\bin\Debug\SqlSugar.dll
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\obj\Debug\Lxsh.Project.CountingInterface.csprojAssemblyReference.cache
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\obj\Debug\Lxsh.Project.CountingInterface.csproj.CoreCompileInputs.cache
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\obj\Debug\Lxsh.Project.CountingInterface.csproj.CopyComplete
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\obj\Debug\Lxsh.Project.CountingInterface.dll
+F:\研发一部\5.源代码\1.框架及系统\系统\5.人员工具清点系统\Lxsh.Project.CountingAPI\Lxsh.Project.CountingInterface\obj\Debug\Lxsh.Project.CountingInterface.pdb
